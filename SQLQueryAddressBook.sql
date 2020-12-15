@@ -49,3 +49,12 @@ Delete from Address_Book where First_Name='Aryan';
 Delete from Address_Book where Last_Name='Exo';
 --Deleting a contact by using first name or last name
 Delete from Address_Book where First_Name='Tejaswini' or Last_Name='Minho';
+/*UC6*/
+--To retrieve contacts based on state
+Select * from Address_Book where State = 'Karnataka';
+--To retrieve contacts based on state
+Select * from Address_Book where State = 'Maharashtra';
+--To retrieve contacts based on city
+Select * from Address_Book where city = 'Seoul';
+--To retrieve contacts based on city
+Select * from Address_Book where city = 'Mumbai';
