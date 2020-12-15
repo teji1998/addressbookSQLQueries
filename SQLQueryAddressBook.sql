@@ -73,4 +73,12 @@ where City='Mumbai' and State='Maharashtra';
 --Taking both city and state to get city count
 Select Count(State) as city_count from Address_Book
 where City='Ponda' and State='Goa';
+/*UC8*/
+--to sort alphabetically for a given city by first name
+select * from Address_Book where City = 'Hubli' order by First_Name ASC ;
+select * from Address_Book where City = 'Mumbai' order by First_Name ASC ;
+--to sort alphabetically for a given city by last name
+select * from Address_Book where City = 'Hubli' order by Last_Name ASC ;
+select * from Address_Book where City = 'Mumbai' order by Last_Name ASC ;
+
 
