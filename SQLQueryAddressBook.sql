@@ -40,3 +40,12 @@ Update Address_Book set Address='LottePark' where First_Name='Tejaswini' ;
 Update Address_Book set Zip='908323' where Last_Name='Minho' ;
 --Editing a contact by using first name or last name
 Update Address_Book set Address='Buckingham' where First_Name='Roopa' or Last_Name = 'Exo';
+/*UC5*/
+--Deleting a contact by using first name and last name
+Delete from Address_Book where First_Name='Tejaswini' and Last_Name='Shetti';
+--Deleting a contact by using first name 
+Delete from Address_Book where First_Name='Aryan';
+--Deleting a contact by using last name
+Delete from Address_Book where Last_Name='Exo';
+--Deleting a contact by using first name or last name
+Delete from Address_Book where First_Name='Tejaswini' or Last_Name='Minho';
