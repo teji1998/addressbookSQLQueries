@@ -31,3 +31,12 @@ insert into Address_Book(First_Name,Last_Name,Address,City,State,Zip,Mobile_Numb
 values('Abhimanyu','Jagirdar','Farmhouse','Mumbai','Maharashtra','400767','8956434789','abhi_jagir@cmtv.com');
 --To retrieve all records from table;
 Select * from Address_Book;
+/*UC4*/
+--Editing a contact by using first name and last name
+Update Address_Book set Email_Id='tejasvini@gmail.com' where First_Name='Tejaswini' and Last_Name = 'Kulkarni';
+--Editing a contact by using only first name
+Update Address_Book set Address='LottePark' where First_Name='Tejaswini' ;
+--Editing a contact by using only last name
+Update Address_Book set Zip='908323' where Last_Name='Minho' ;
+--Editing a contact by using first name or last name
+Update Address_Book set Address='Buckingham' where First_Name='Roopa' or Last_Name = 'Exo';
