@@ -29,3 +29,5 @@ insert into Address_Book(First_Name,Last_Name,Address,City,State,Zip,Mobile_Numb
 values('Aryan','Wellington','lakeview','Hubli','Karnataka','560788','8777622100','arayanwelli@abdc.com');
 insert into Address_Book(First_Name,Last_Name,Address,City,State,Zip,Mobile_Number,Email_Id)
 values('Abhimanyu','Jagirdar','Farmhouse','Mumbai','Maharashtra','400767','8956434789','abhi_jagir@cmtv.com');
+--To retrieve all records from table;
+Select * from Address_Book;
