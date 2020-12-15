@@ -3,14 +3,17 @@
 create database Address_Book_Service;
 --using the database
 use Address_Book_Service;
+
 /*UC2*/
 --creating address book table
 Create table Address_Book(Id int identity(1,1) primary key,First_Name Varchar(30),Last_Name Varchar(30),
 Address Varchar(50),City Varchar(50),State Varchar(50),Zip int,Mobile_Number Varchar(10) unique, 
 Email_Id Varchar(40) unique) ;
+
 /*--To change datatype of mobile number from varchar to int
 Alter Table Address_Book
 Alter Column Mobile_Number int;*/
+
 /*UC3*/
 --To insert new Contact into addressbook
 insert into Address_Book(First_Name,Last_Name,Address,City,State,Zip,Mobile_Number,Email_Id)
@@ -29,8 +32,10 @@ insert into Address_Book(First_Name,Last_Name,Address,City,State,Zip,Mobile_Numb
 values('Aryan','Wellington','lakeview','Hubli','Karnataka','560788','8777622100','arayanwelli@abdc.com');
 insert into Address_Book(First_Name,Last_Name,Address,City,State,Zip,Mobile_Number,Email_Id)
 values('Abhimanyu','Jagirdar','Farmhouse','Mumbai','Maharashtra','400767','8956434789','abhi_jagir@cmtv.com');
+
 --To retrieve all records from table;
 Select * from Address_Book;
+
 /*UC4*/
 --Editing a contact by using first name and last name
 Update Address_Book set Email_Id='tejasvini@gmail.com' where First_Name='Tejaswini' and Last_Name = 'Kulkarni';
@@ -40,6 +45,7 @@ Update Address_Book set Address='LottePark' where First_Name='Tejaswini' ;
 Update Address_Book set Zip='908323' where Last_Name='Minho' ;
 --Editing a contact by using first name or last name
 Update Address_Book set Address='Buckingham' where First_Name='Roopa' or Last_Name = 'Exo';
+
 /*UC5*/
 --Deleting a contact by using first name and last name
 Delete from Address_Book where First_Name='Tejaswini' and Last_Name='Shetti';
@@ -49,6 +55,7 @@ Delete from Address_Book where First_Name='Aryan';
 Delete from Address_Book where Last_Name='Exo';
 --Deleting a contact by using first name or last name
 Delete from Address_Book where First_Name='Tejaswini' or Last_Name='Minho';
+
 /*UC6*/
 --To retrieve contacts based on state
 Select * from Address_Book where State = 'Karnataka';
@@ -58,6 +65,7 @@ Select * from Address_Book where State = 'Maharashtra';
 Select * from Address_Book where city = 'Seoul';
 --To retrieve contacts based on city
 Select * from Address_Book where city = 'Mumbai';
+
 /*UC7*/
 --To retrieve the count of records based on city
 Select COUNT(City) as city_count from Address_Book where City = 'Mumbai';
@@ -73,6 +81,7 @@ where City='Mumbai' and State='Maharashtra';
 --Taking both city and state to get city count
 Select Count(State) as city_count from Address_Book
 where City='Ponda' and State='Goa';
+
 /*UC8*/
 --to sort alphabetically for a given city by first name
 select * from Address_Book where City = 'Hubli' order by First_Name ASC ;
