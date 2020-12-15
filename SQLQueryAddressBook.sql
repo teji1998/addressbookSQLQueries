@@ -58,3 +58,19 @@ Select * from Address_Book where State = 'Maharashtra';
 Select * from Address_Book where city = 'Seoul';
 --To retrieve contacts based on city
 Select * from Address_Book where city = 'Mumbai';
+/*UC7*/
+--To retrieve the count of records based on city
+Select COUNT(City) as city_count from Address_Book where City = 'Mumbai';
+Select COUNT(City) as city_count from Address_Book where City = 'Hubli';
+Select COUNT(City) as city_count from Address_Book where City = 'Ponda';
+-- To retrieve the count of records based on State
+Select COUNT(State)as state_count from Address_Book where State = 'Karnataka';
+Select COUNT(State) as state_count from Address_Book where State = 'Konkan';
+Select COUNT(State) as state_count from Address_Book where State = 'Goa';
+--Taking both city and state to get state count
+Select Count(State) as state_count from Address_Book
+where City='Mumbai' and State='Maharashtra';
+--Taking both city and state to get city count
+Select Count(State) as city_count from Address_Book
+where City='Ponda' and State='Goa';
+
