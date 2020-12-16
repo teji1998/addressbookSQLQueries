@@ -143,3 +143,6 @@ select * from Person_And_AddressBook;
 --To get count of person by type
 Select Count(Book_Id) as Contacts,Book_Id from Person_And_AddressBook
 Group by Book_Id;
+
+/*UC12*/
+--ER Diagram
