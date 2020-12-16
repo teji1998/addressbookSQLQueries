@@ -146,3 +146,13 @@ Group by Book_Id;
 
 /*UC12*/
 --ER Diagram
+
+/*UC13*/
+--Crud operations
+select * from Address_Book;
+--To retrieve contacts based on state
+Select * from Address_Book where State = 'Karnataka';
+--to sort alphabetically for a given city by last name
+select * from Address_Book where City = 'Hubli' order by Last_Name ASC ;
+--to sort alphabetically  in descending order for a given city by first name
+select * from Address_Book where City = 'Mumbai' order by Last_Name DESC ;
