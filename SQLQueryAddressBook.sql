@@ -112,5 +112,6 @@ Insert into Address_Book_Type(person_type,address_book_name)
 values('Friend','Friend_Address_Book'),
 ('Family','Family_Address_Book'),
 ('Profession','Profession_Address_Book');
+
 --To retrieve records from address book type
 select * from Address_Book_Type;
