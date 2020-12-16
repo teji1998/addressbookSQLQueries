@@ -90,4 +90,7 @@ select * from Address_Book where City = 'Mumbai' order by First_Name ASC ;
 select * from Address_Book where City = 'Hubli' order by Last_Name ASC ;
 select * from Address_Book where City = 'Mumbai' order by Last_Name ASC ;
 
+/*UC9*/
+--altering table to add addressbook name and type column
+Alter table  Address_Book add Address_Book_Name varchar(20) , Type varchar(20);
 
