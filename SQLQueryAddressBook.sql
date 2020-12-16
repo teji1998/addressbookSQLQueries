@@ -115,3 +115,7 @@ values('Friend','Friend_Address_Book'),
 
 --To retrieve records from address book type
 select * from Address_Book_Type;
+
+/*UC10*/
+--to get count by type
+Select COUNT(Type) as type_count from Address_Book where Type='Friend';
