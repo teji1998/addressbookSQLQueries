@@ -93,4 +93,12 @@ select * from Address_Book where City = 'Mumbai' order by Last_Name ASC ;
 /*UC9*/
 --altering table to add addressbook name and type column
 Alter table  Address_Book add Address_Book_Name varchar(20) , Type varchar(20);
+--Updating the values in the table
+Update Address_Book set Type = 'Family' , Address_Book_Name = 'A' where First_Name='Tejaswini';
+Update Address_Book set Type = 'Friend', Address_Book_Name = 'B' where Last_Name='Wellington';
+Update Address_Book set Type='Profession' , Address_Book_Name = 'A' where Last_Name='Rajkumar';
+Update Address_Book set Type='Profession' , Address_Book_Name = 'B' where Last_Name='Jagirdar';
+Update Address_Book set Type='Friend' , Address_Book_Name = 'C' where First_Name='Lee';
+Update Address_Book set Type='Family' , Address_Book_Name = 'C' where Last_Name='Pai';
+Update Address_Book set Type='Family' , Address_Book_Name = 'B' where Last_Name='Exo';
 
