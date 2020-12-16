@@ -138,4 +138,8 @@ values(6,2),
 (12,2),
 (13,1),
 (6,1);
+--retrieve the records
 select * from Person_And_AddressBook;
+--To get count of person by type
+Select Count(Book_Id) as Contacts,Book_Id from Person_And_AddressBook
+Group by Book_Id;
