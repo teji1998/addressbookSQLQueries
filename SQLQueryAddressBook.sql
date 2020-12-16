@@ -101,4 +101,9 @@ Update Address_Book set Type='Profession' , Address_Book_Name = 'B' where Last_N
 Update Address_Book set Type='Friend' , Address_Book_Name = 'C' where First_Name='Lee';
 Update Address_Book set Type='Family' , Address_Book_Name = 'C' where Last_Name='Pai';
 Update Address_Book set Type='Family' , Address_Book_Name = 'B' where Last_Name='Exo';
-
+--creating table Address_Book_Type
+Create table Address_Book_Type(
+address_book_id int identity(1,1) primary key,
+person_type varchar(20) ,
+address_book_name varchar(50)
+);
