@@ -119,3 +119,23 @@ select * from Address_Book_Type;
 /*UC10*/
 --to get count by type
 Select COUNT(Type) as type_count from Address_Book where Type='Friend';
+
+--UC11 Adding one Person both Profession and friend
+Create table Person_And_AddressBook(
+Person_Id int not null Foreign Key(Person_Id) references Address_Book(ID),
+Book_Id int not null Foreign key(Book_Id) references Address_Book_Type(address_book_id)
+)
+--To retrieve the records
+Select * from Address_Book;
+--inserting values into Person_And_AddressBook
+Insert Into Person_And_AddressBook(Person_Id,Book_Id)
+values(6,2),
+(8,3),
+(10,1),
+(14,1),
+(11,3),
+(9,2),
+(12,2),
+(13,1),
+(6,1);
+select * from Person_And_AddressBook;
